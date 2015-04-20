@@ -19,6 +19,9 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //textview=(TextView)findViewById(R.id.textView1);
+
         // Simple array with a list of my favorite TV shows
         String[] MyTvShow = {
                 "Pushing Daisies", "Better Off Ted", "Twin Peaks", "Freaks and Geeks", "Orphan Black", "Walking Dead",
@@ -33,7 +36,7 @@ public class MainActivity extends ActionBarActivity {
         // -It is a predefined layout provided by Android that stands in as a default
 
 
-        ListAdapter listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MyTvShow);
+        ListAdapter listAdapter = new ArrayAdapter<String>(this, R.layout.row_layout, R.id.textView1, MyTvShow);
 
         // ListViews display data in a scrollable list
         ListView listView = (ListView) findViewById(R.id.thelistView);
@@ -47,7 +50,7 @@ public class MainActivity extends ActionBarActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String tvShow = "You Selected" + String.valueOf(adapterView.getItemAtPosition(i));
+                String tvShow = " You Selected " + String.valueOf(adapterView.getItemAtPosition(i));
                 Toast.makeText(MainActivity.this, tvShow, Toast.LENGTH_LONG).show();
             }
         });
