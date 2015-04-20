@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -46,7 +47,8 @@ public class MainActivity extends ActionBarActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                String tvShow = "You Selected" + String.valueOf(adapterView.getItemAtPosition(i));
+                Toast.makeText(MainActivity.this, tvShow, Toast.LENGTH_LONG).show();
             }
         });
 
