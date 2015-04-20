@@ -1,9 +1,11 @@
 package com.imufun.imran.listview_imgview_layinf_view_viewgrp_more;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -23,15 +25,32 @@ public class MainActivity extends ActionBarActivity {
         };
 
 
-        // The ListAdapter acts as a bridge between the data and each ListItem
-        // You fill the ListView with a ListAdapter. You pass it a context represented by
-        // this. A Context provides access to resources you need.
-        // android.R.layout.simple_list_item_1 is one of the resources needed.
-        // It is a predefined layout provided by Android that stands in as a default
+        // -The ListAdapter acts as a bridge between the data and each ListItem
+        // -You fill the ListView with a ListAdapter. You pass it a context represented by
+        // -this. A Context provides access to resources you need.
+        // -android.R.layout.simple_list_item_1 is one of the resources needed.
+        // -It is a predefined layout provided by Android that stands in as a default
 
 
         ListAdapter listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MyTvShow);
+
+        // ListViews display data in a scrollable list
         ListView listView = (ListView) findViewById(R.id.thelistView);
+
+        // Tells the ListView what data to use
+        listView.setAdapter(listAdapter); //set adapter to string array
+
+
+        //
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
+
+
     }
 
     @Override
