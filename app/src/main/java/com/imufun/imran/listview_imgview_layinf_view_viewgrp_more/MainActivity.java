@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -36,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
         // -It is a predefined layout provided by Android that stands in as a default
 
 
-        ListAdapter listAdapter = new ArrayAdapter<String>(this, R.layout.row_layout, R.id.textView1, MyTvShow);
+        ListAdapter listAdapter = new MyAdapter(this, MyTvShow);
 
         // ListViews display data in a scrollable list
         ListView listView = (ListView) findViewById(R.id.thelistView);
