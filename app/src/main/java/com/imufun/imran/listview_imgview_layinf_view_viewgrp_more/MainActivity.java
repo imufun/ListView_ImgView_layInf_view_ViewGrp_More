@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity {
         // Simple array with a list of my favorite TV shows
         String[] MyTvShow = {
                 "Pushing Daisies", "Better Off Ted", "Twin Peaks", "Freaks and Geeks", "Orphan Black", "Walking Dead",
-                "Breaking Bad", "The 400", "Alphas", "Life on Mars"
+                "Breaking Bad", "The 400", "Alphas", "game", "O07", "rider", "Android", "Php", "Java", "First", "Alphas", "ম্যাপ", "Alphas", "Alphas", "Alphas", "Alphas", "Alphas", "Life on Mars"
         };
 
 
